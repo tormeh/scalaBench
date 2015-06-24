@@ -4,7 +4,7 @@ object Bench
 {
   def main(args: Array[String]) 
   {
-    println((0 until (Int.MaxValue)/5).par.map(x=>calculation(x)).fold(0)((x,y)=>x+y))
+    println("Benchmark calculation result is: " + (0 until (Int.MaxValue)/5).par.map(x=>calculation(x)).fold(0)((x,y)=>x+y).toString)
   }
   
   def calculation(in:Int):Int =
